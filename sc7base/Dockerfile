@@ -49,8 +49,9 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
  && mv apache-tomcat* tomcat
 
 
-ADD sc7base.sh /sc7base.sh \
- && RUN chmod +x /*.sh
+ADD sc7base.sh /sc7base.sh
+
+RUN chmod +x /*.sh
 
 EXPOSE $PORT
 
